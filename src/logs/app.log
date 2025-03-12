@@ -1,0 +1,11 @@
+[11:40:26.797] [32mINFO[39m (8016): [36mJob de envio de e-mail adicionado à fila: 30[39m
+[11:40:26.799] [32mINFO[39m (8016): [36m📩 Processando job de envio de e-mail: 30[39m
+[11:40:26.802] [31mERROR[39m (8016): [36m❌ Falha no job 30, Erro: logger is not defined[39m
+[11:40:26.804] [32mINFO[39m (8016): [36m✅ Job 30 completado com sucesso[39m
+[11:40:36.224] [32mINFO[39m (6504): [36mJob de envio de e-mail adicionado à fila: 31[39m
+[11:40:36.228] [32mINFO[39m (6504): [36m📩 Processando job de envio de e-mail: 31[39m
+[11:40:36.229] [32mINFO[39m (6504): [36mEnviando e-mail para: mydearjenk@gmail.com, Assunto: Email Teste![39m
+[11:40:38.904] [32mINFO[39m (6504): [36mE-mail enviado com sucesso para: mydearjenk@gmail.com[39m
+[11:40:38.905] [32mINFO[39m (6504): [36m✅ Job de envio de e-mail 31 concluído com sucesso[39m
+[11:40:38.907] [32mINFO[39m (6504): [36m✅ Job 31 completado com sucesso[39m
+[11:57:18.925] [32mINFO[39m (6504): [36m Job 31 Removido da fila[39m

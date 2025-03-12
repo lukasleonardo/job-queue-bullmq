@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer')
 const dotenv = require('dotenv')
+const logger = require('../config/logger')
 
 dotenv.config();
 
@@ -14,12 +15,14 @@ const transporter = nodemailer.createTransport({
 });
 
  async function sendEmail(to, subject, body) {
-    await transporter.sendMail({
-        from: process.env.EMAIL_USER,
-        to,
-        subject,
-        text: body
-    })
+        logger.info(`Enviando e-mail para: ${to}, Assunto: ${subject}`);
+        await transporter.sendMail({
+            from: process.env.EMAIL_USER,
+            to,
+            subject,
+            text: body
+        })
+        logger.info(`E-mail enviado com sucesso para: ${to}`);
     }
 
     module.exports = {sendEmail}
