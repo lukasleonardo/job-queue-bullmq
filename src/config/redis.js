@@ -1,14 +1,10 @@
-const { createClient } = require("redis");
+const Redis = require("ioredis");
 
-const redisClient = createClient({
-    url: process.env.REDIS_URL || "redis://localhost:6379" 
+const redisClient = new Redis(process.env.REDIS_URL, {
+    tls: { rejectUnauthorized: false } // Se precisar de conexão segura
 });
 
-redisClient.on("error", (err) => console.error("Erro no Redis", err));
-
-(async () => {
-    await redisClient.connect();
-    console.log("🔗 Conectado ao Redis!");
-})();
+redisClient.on("connect", () => console.log("✅ Conectado ao Redis no Railway!"));
+redisClient.on("error", (err) => console.error("❌ Erro no Redis:", err));
 
 module.exports = redisClient;
