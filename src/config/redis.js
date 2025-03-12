@@ -1,7 +1,8 @@
 const Redis = require("ioredis");
 
 const redisClient = new Redis(process.env.REDIS_URL, {
-    tls: { rejectUnauthorized: false } // Se precisar de conexão segura
+    tls: { rejectUnauthorized: false },
+    maxRetriesPerRequest: null,
 });
 
 redisClient.on("connect", () => console.log("✅ Conectado ao Redis no Railway!"));
